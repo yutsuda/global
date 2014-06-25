@@ -151,7 +151,7 @@ As a result, in the development environment we have:
 > Global.reload!
 ```
 
-## JavaScript in Rails support
+## JavaScript in Rails Assets
 
 ### Configuration
 

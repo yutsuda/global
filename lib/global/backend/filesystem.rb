@@ -62,8 +62,9 @@ module Global
       def load_yml_file(file)
         YAML.safe_load(
           ERB.new(IO.read(file)).result,
-          [Date, Time, DateTime, Symbol].concat(@yaml_whitelist_classes),
-          [], true
+          permitted_classes: [Date, Time, DateTime, Symbol].concat(@yaml_whitelist_classes),
+          permitted_symbols: [],
+          aliases: true
         )
       end
 
